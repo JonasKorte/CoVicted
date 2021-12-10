@@ -9,6 +9,36 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Reference",
+"class": "DTS",
+"language": "GDScript",
+"path": "res://addons/dialogic/Localization/translation_service.gd"
+}, {
+"base": "Node",
+"class": "Dialogic",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicClass.gd"
+}, {
+"base": "Control",
+"class": "DialogicBackgroundMusic",
+"language": "GDScript",
+"path": "res://addons/dialogic/Nodes/BackgroundMusic.gd"
+}, {
+"base": "Node",
+"class": "DialogicDefinitionsUtil",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicDefinitionsUtil.gd"
+}, {
+"base": "Reference",
+"class": "DialogicResources",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicResources.gd"
+}, {
+"base": "Reference",
+"class": "DialogicUtil",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicUtil.gd"
+}, {
 "base": "ResourceFormatLoader",
 "class": "HTerrainDataLoader",
 "language": "GDScript",
@@ -55,6 +85,12 @@ _global_script_classes=[ {
 "path": "res://addons/godotsteam/godotsteam.gdns"
 } ]
 _global_script_class_icons={
+"DTS": "",
+"Dialogic": "",
+"DialogicBackgroundMusic": "",
+"DialogicDefinitionsUtil": "",
+"DialogicResources": "",
+"DialogicUtil": "",
 "HTerrainDataLoader": "",
 "HTerrainDataSaver": "",
 "LocalizationData": "",
@@ -70,6 +106,19 @@ _global_script_class_icons={
 
 config/name="CoVictedGame"
 config/icon="res://icon.png"
+
+[autoload]
+
+Steam="*res://addons/godotsteam/steam.tscn"
+Networking="*res://addons/easy_networking/networking.gd"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/easy_networking/plugin.cfg", "res://addons/godotsteam/plugin.cfg", "res://addons/imjp94.yafsm/plugin.cfg", "res://addons/localization_editor/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg" )
+
+[locale]
+
+translations=PoolStringArray( "res://localization/localizations.en.translation", "res://localization/localizations.de.translation", "res://localization/localizations.ru.translation" )
 
 [physics]
 
